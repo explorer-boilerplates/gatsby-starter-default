@@ -16,7 +16,7 @@ type Layout = {
   children: ReactNode
 }
 
-const Layout = ({ children }: Layout) => {
+const Layout: React.FC<Layout> = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
