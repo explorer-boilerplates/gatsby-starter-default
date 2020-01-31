@@ -16,7 +16,12 @@ type SEO = {
   title: string
 }
 
-function SEO({ description = ``, lang = `en`, meta = [], title }: SEO) {
+function SEO({
+  description = ``,
+  lang = `en`,
+  meta = [],
+  title,
+}: SEO): JSX.Element {
   const { site } = useStaticQuery(
     graphql`
       query {

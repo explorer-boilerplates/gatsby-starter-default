@@ -1,16 +1,22 @@
 import { Link } from "gatsby"
 import React from "react"
 
+import tw from "tailwind.macro"
+import { css } from "@emotion/core"
+
 type Header = {
   siteTitle: string
 }
 
+// const StyledHeader = tw.button`
+// bg-purple-800 mb-8 w-full
+// `
+
 const Header: React.FC<Header> = ({ siteTitle = "" }: Header) => (
   <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
+    css={css`
+      ${tw`bg-purple-800 mb-8 w-full`}
+    `}
   >
     <div
       style={{

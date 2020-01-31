@@ -7,7 +7,7 @@
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "emotion", "prettier"],
   "env": {
     "browser": true,
     "jasmine": true,
@@ -19,11 +19,16 @@
       {
         "singleQuote": false
       }
-    ]
+    ],
+
+    "emotion/jsx-import": "error",
+    "emotion/no-vanilla": "error",
+    "emotion/import-from-emotion": "error",
+    "emotion/styled-import": "error",
+    "emotion/syntax-preference": [2, "string"]
   },
   "settings": {
     "react": {
-      "pragma": "React",
       "version": "detect"
     }
   }
