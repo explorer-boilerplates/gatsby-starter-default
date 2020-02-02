@@ -56,5 +56,6 @@ module.exports = {
         // Accepts all options defined by `gatsby-plugin-postcss` plugin.
       },
     },
+    "gatsby-plugin-svgr",
   ],
 }
