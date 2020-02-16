@@ -5,12 +5,8 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Explorer's Gatsby default starter
 </h1>
-
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
-
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
 ## 🚀 Quick start
 
@@ -57,41 +53,57 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── package-lock.json
     ├── package.json
     └── README.md
+    |-- .babelrc
+    |-- .eslintignore
+    |-- .eslintrc
+    |-- .prettierignore
+    |-- babel-plugin-macros-config.js
+    |-- postcss.config.js
+    |-- tailwind.config.js
+    |-- tsconfig.json
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
 2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+3.  **`/src/utils`**: This directory contains all of the helper files for setting up application level settings.
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+4.  **`/src/global.css`**: global styling for application. Includes tailwind base classes
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+5.  **`/src/declarations.d.ts`**: type definitions for modules used inside project
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+6.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+7.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+8.  **`.prettierignore`**: This file tells prettier which files it should not track.
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+9.  **`.eslintrc`**: This file is a configuration file for [ESLint](https://eslint.org/). ESLint is a linting tool for javascript to help you find and fix problems with your code. By default it is set to work with react, typescript and prettier.
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+10. **`.eslintignore`**: This file tells ESlint which files it should not track.
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+11. **`babel-plugin-macros-config.js`**: This file is a configuration file to make babel-plugin-macros work with Emotion JS & tailwind.marco.
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+12. **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
-## 🎓 Learning Gatsby
+13. **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+14. **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+15. **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+16. **`LICENSE`**: Gatsby is licensed under the MIT license.
 
-## 💫 Deploy
+17. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+18. **`postcss.config.js`**: This file is a configuration file to help integrate tailwindcss to our project. It also takes care of linting styles and uses postcss-preset-env to add vendor prefixes and setup browser support.
+
+19. **`README.md`**: A text file containing useful reference information about your project.
+
+20. **`tailwind.config.js`**: This file is configuration file for tailwindcss framework.
+
+21. **`tsconfig.json`**: This file is configuration file for Typescript.
+
+22. **`yarn-lock`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your yarn dependencies that were installed for your project. **(You won’t change this file directly).**
 
 <!-- AUTO-GENERATED-CONTENT:END -->
